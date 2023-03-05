@@ -1,0 +1,7 @@
+a = list(map(int, input().split()))
+b = 1
+c = 1
+for i in range(a[1]):
+    b *= (a[0]-i)
+    c *= (i+1)
+print(b//c)
