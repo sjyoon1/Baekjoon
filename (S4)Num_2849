@@ -1,0 +1,19 @@
+a = int(input())
+b = 5
+c = 3
+d = 0
+e = 0
+f = 0
+g = []
+for i in range(a):
+    for j in range(a):
+        if b*i + c*j == a:
+            d = i
+            e = j
+            g.append(d+e)
+        else:
+            f = -1
+if d != 0 or e != 0:
+    print(min(g))
+else:
+    print(f)
