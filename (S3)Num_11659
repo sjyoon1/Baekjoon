@@ -1,0 +1,12 @@
+import sys
+a, b = map(int, sys.stdin.readline().split())
+c = list(map(int, sys.stdin.readline().split()))
+f = [0]
+g = 0
+for i in c:
+    g += i
+    f.append(g)
+
+for i in range(b):
+    d, e = map(int, sys.stdin.readline().split())
+    print(f[e] - f[d-1])
