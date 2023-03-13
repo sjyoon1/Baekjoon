@@ -1,0 +1,15 @@
+a = int(input())
+c = []
+for i in range(a, a-70, -1):
+    if i == 0:
+        break
+    b = i
+    i = str(i)
+    for j in range(len(i)):
+        b += int(i[j])
+    if b == a:
+        c.append(i)
+if len(c) >= 1:
+    print(c[len(c)-1])
+else:
+    print(0)
