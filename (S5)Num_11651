@@ -1,0 +1,9 @@
+a = int(input())
+b = []
+for i in range(a):
+    c = list(map(int, input().split()))
+    d = [c[1], c[0]]
+    b.append(d)
+b.sort()
+for j in range(a):
+    print(b[j][1], b[j][0])
