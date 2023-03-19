@@ -1,0 +1,39 @@
+import sys
+input = sys.stdin.readline
+a = int(input())
+c = []
+for i in range(a):
+    b = input().split()
+    if b[0] == "size":
+        print(len(c))
+    elif b[0] == "pop_front":
+        if len(c) == 0:
+            print(-1)
+        else:
+            print(c[-1])
+            c.pop()
+    elif b[0] == "pop_back":
+        if len(c) == 0:
+            print(-1)
+        else:
+            print(c[0])
+            del c[0]
+    elif b[0] == "front":
+        if len(c) == 0:
+            print(-1)
+        else:
+            print(c[-1])
+    elif b[0] == "back":
+        if len(c) == 0:
+            print(-1)
+        else:
+            print(c[0])
+    elif b[0] == "empty":
+        if len(c) == 0:
+            print(1)
+        else:
+            print(0)
+    elif b[0][5:9] == "back":
+        c.insert(0, b[-1])
+    else:
+        c.append(b[-1])
