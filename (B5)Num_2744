@@ -1,0 +1,8 @@
+a = input()
+b = ""
+for i in range(len(a)):
+    if a[i].islower() == True:
+        b += a[i].upper()
+    else:
+        b += a[i].lower()
+print(b)
