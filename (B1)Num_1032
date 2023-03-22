@@ -1,0 +1,14 @@
+import sys
+input = sys.stdin.readline
+a = int(input())
+b = input()
+d = []
+for i in range(len(b)):
+    d.append(b[i])
+for i in range(a-1):
+    c = input()
+    for j in range(len(b)):
+        if b[j] != c[j]:
+            d[j] = "?"
+for i in range(len(d)):
+    print(d[i], end="")
