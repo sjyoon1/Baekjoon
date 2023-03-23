@@ -1,0 +1,17 @@
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+e = int(input())
+h = []
+f = b % d
+g = c % e
+if f > 0:
+    h.append(a-(b//d)-1)
+else:
+    h.append(a-(b//d))
+if g > 0:
+    h.append(a-(c//e)-1)
+else:
+    h.append(a-(c//e))
+print(min(h))
