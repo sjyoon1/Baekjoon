@@ -1,0 +1,6 @@
+a = [0 for i in range(26)]
+b = input()
+for i in range(len(b)):
+    a[ord(b[i])-97] += 1
+for i in a:
+    print(i, end=" ")
