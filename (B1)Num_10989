@@ -1,0 +1,13 @@
+import sys
+input = sys.stdin.readline
+a = int(input())
+b = [0 for i in range(10000)]
+for i in range(a):
+    c = int(input())
+    b[c-1] += 1
+for i in range(10000):
+    if b[i] == 0:
+        continue
+    else:
+        for j in range(b[i]):
+            print(i+1)
