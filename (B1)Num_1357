@@ -1,0 +1,24 @@
+a, b = map(str, input().split())
+c = ""
+d = ""
+for i in range(len(a)-1, -1, -1):
+    if len(c) == 0 and a[i] == "0":
+        continue
+    else:
+        c += a[i]
+for i in range(len(b)-1, -1, -1):
+    if len(d) == 0 and b[i] == "0":
+        continue
+    else:
+        d += b[i]
+c = int(c)
+d = int(d)
+e = c + d
+f = ""
+e = str(e)
+for i in range(len(e)-1, -1, -1):
+    if len(f) == 0 and e[i] == "0":
+        continue
+    else:
+        f += e[i]
+print(f)
