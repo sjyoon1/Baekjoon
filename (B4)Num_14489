@@ -1,0 +1,7 @@
+a = list(map(int, input().split()))
+b = int(input())
+
+if a[0] + a[1] >= 2*b:
+    print(a[0]+a[1]-2*b)
+else :
+    print(a[0]+a[1])
