@@ -1,0 +1,32 @@
+import sys
+input = sys.stdin.readline
+a = int(input())
+c = set()
+for i in range(a):
+    b = list(map(str, input().split()))
+    if len(b) == 2:
+        b[1] = int(b[1])
+    if b[0] == "add":
+        if b[1] in c:
+            continue
+        else:
+            c.add(b[1])
+    elif b[0] == "remove":
+        if b[1] in c:
+            c.discard(b[1])
+        else:
+            continue
+    elif b[0] == "check":
+        if b[1] in c:
+            print(1)
+        else:
+            print(0)
+    elif b[0] == "all":
+        c = {i for i in range(1, 21)}
+    elif b[0] == "empty":
+        c = set()
+    elif b[0] == "toggle":
+        if b[1] in c:
+            c.discard(b[1])
+        else:
+            c.add(b[1])
