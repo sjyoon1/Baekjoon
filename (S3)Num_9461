@@ -1,0 +1,9 @@
+import sys
+input = sys.stdin.readline
+a = int(input())
+c = [1, 1, 1, 2, 2, 3, 4, 5, 7, 9]
+for i in range(9, 100):
+    c.append(c[i] + c[i-4])
+for i in range(a):
+    b = int(input())
+    print(c[b-1])
