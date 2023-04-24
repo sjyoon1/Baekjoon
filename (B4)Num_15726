@@ -1,0 +1,7 @@
+import sys
+input = sys.stdin.readline
+b = list(map(int, input().split()))
+c = []
+c.append(b[0] * b[1] / b[2])
+c.append(b[0] / b[1] * b[2])
+print(int(max(c)))
