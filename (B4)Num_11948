@@ -1,0 +1,19 @@
+import sys
+input = sys.stdin.readline
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+e = int(input())
+f = int(input())
+g = []
+h = []
+g.append(a)
+g.append(b)
+g.append(c)
+g.append(d)
+h.append(e)
+h.append(f)
+g.sort()
+h.sort()
+print(g[1] + g[2] + g[3] + h[1])
