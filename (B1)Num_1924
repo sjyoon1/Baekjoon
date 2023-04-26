@@ -1,0 +1,22 @@
+import sys
+input = sys.stdin.readline
+a = list(map(int, input().split()))
+b = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+c = 0
+for i in range(a[0]-1):
+    c += b[i]
+c += a[1]
+if c % 7 == 1:
+    print("MON")
+elif c % 7 == 2:
+    print("TUE")
+elif c % 7 == 3:
+    print("WED")
+elif c % 7 == 4:
+    print("THU")
+elif c % 7 == 5:
+    print("FRI")
+elif c % 7 == 6:
+    print("SAT")
+elif c % 7 == 0:
+    print("SUN")
