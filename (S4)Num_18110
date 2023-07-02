@@ -1,0 +1,26 @@
+import sys
+from collections import deque
+
+def round_up(val):
+    return round(val+10**(-len(str(val))))
+
+input = sys.stdin.readline
+n = []
+a = int(input())
+for i in range(a):
+    b = int(input())
+    n.append(b)
+n.sort()
+
+deq = deque(n)
+c = round_up(a*0.15)
+if c != 0:
+    for i in range(c):
+        deq.remove(n[0])
+        deq.pop()
+elif c == 0:
+    deq = deq
+if a == 0:
+    print(0)
+else:
+    print(round_up(sum(deq)/len(deq)))
