@@ -1,0 +1,14 @@
+import sys
+input = sys.stdin.readline
+a = int(input())
+n = []
+for i in range(a):
+    b = list(map(int, input().split()))
+    n.append(b)
+for i in n:
+    rank = 1
+    for j in n:
+        if (i[0] != j[0]) and (i[1] != j[1]):
+            if (i[0] < j[0]) and (i[1] < j[1]):
+                rank += 1
+    print(rank, end=" ")
