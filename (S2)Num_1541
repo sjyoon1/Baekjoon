@@ -1,0 +1,37 @@
+import sys
+input = sys.stdin.readline
+a = input()
+b = []
+c = []
+d = []
+n = 0
+for i in range(len(a)):
+    if a[i] == "+" or a[i] == "-":
+        e = ""
+        b.append(a[i])
+        for i in c:
+            e += i
+        d.append(e)
+        c = []
+    else:
+        c.append(a[i])
+c.pop()
+e = ""
+for i in c:
+    e += i
+d.append(e)
+n += int(d[0])
+for i in range(len(b)):
+    f = int(d[i+1])
+    if b[i] == "-":
+        n -= f
+    else:
+        if i >= 1:
+            if b[i-1] == "-":
+                n -= f
+                b[i] = "-"
+            else:
+                n += f
+        else:
+            n += f
+print(n)
