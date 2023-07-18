@@ -1,0 +1,12 @@
+import sys
+input = sys.stdin.readline
+a = int(input())
+for i in range(a):
+    n = [0, 1]
+    b = int(input())
+    for j in range(2, b+1):
+        n.append(n[j-2]+n[j-1])
+    if b == 0:
+        print(1, 0)
+    else:
+        print(n[len(n)-2], n[len(n)-1])
