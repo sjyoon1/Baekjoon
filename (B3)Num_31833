@@ -1,0 +1,14 @@
+import sys
+input = sys.stdin.readline
+
+a = int(input())
+b = list(map(str, input().split()))
+c = list(map(str, input().split()))
+d = ''.join(b)
+d = int(d)
+e = ''.join(c)
+e = int(e)
+if d > e:
+    print(e)
+else :
+    print(d)
