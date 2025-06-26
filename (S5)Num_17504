@@ -1,0 +1,14 @@
+import sys
+import math
+input = sys.stdin.readline
+
+a = int(input())
+b = list(map(int, input().split()))
+c = [1]
+c.append(b[a-1])
+c.append((b[a-1]*b[a-2])+1)
+for i in range(a-2):
+    c.append((c[i+2]*b[a-i-3])+c[i+1])
+c.append(c[len(c)-1]- c[len(c)-2])
+d = math.gcd(c[len(c)-1], c[len(c)-2])
+print((c[len(c)-1]//d),(c[len(c)-2]//d))
