@@ -1,0 +1,21 @@
+import sys
+input = sys.stdin.readline
+
+a = int(input())
+c = input()
+b = []
+for i in range(a):
+    b.append(c[i])
+for i in range(a//2):
+    if b[i] == "?" and b[a-1-i] == "?":
+        b[i] = "a"
+        b[a-1-i] = "a"
+    elif b[i] == "?" and b[a-1-i] != "?":
+        b[i] = b[a-1-i]
+    elif b[i] != "?" and b[a-1-i] == "?":
+        b[a-1-i] = b[i]
+    else:
+        pass
+if b[a//2] == "?":
+    b[a//2] = "a"
+print(''.join(b))
