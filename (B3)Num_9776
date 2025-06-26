@@ -1,0 +1,21 @@
+import sys
+input = sys.stdin.readline
+
+a = int(input())
+c = []
+p = 3.14159
+for i in range(a):
+    b = list(map(str, input().split()))
+    b[1] = float(b[1])
+    if b[0] == "S":
+        d = b[1] * b[1] * b[1] * p * (4/3)
+        c.append(d)
+    elif b[0] == "C":
+        b[2] = float(b[2])
+        d = (1/3) * p * b[1] * b[1] * b[2]
+        c.append(d)
+    else:
+        b[2] = float(b[2])
+        d = p * b[1] * b[1] * b[2]
+        c.append(d)
+print(round(max(c), 3))
