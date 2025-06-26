@@ -1,0 +1,15 @@
+import sys
+input = sys.stdin.readline
+
+a = int(input())
+b = int(input())
+c = int(input())
+print(a+b-c)
+if b < 10:
+    print((10*a)+b-c)
+elif b < 100:
+    print((100*a)+b-c)
+elif b < 1000:
+    print((1000*a)+b-c)
+else:
+    print((10000*a)+b-c)
