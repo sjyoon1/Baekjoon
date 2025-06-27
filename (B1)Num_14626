@@ -1,0 +1,44 @@
+import sys
+input = sys.stdin.readline
+
+a = input()
+b = 0
+for i in range(13):
+    if a[i] == "*":
+        if i % 2 == 0:
+            c = 1
+        else :
+            c = 2
+        pass
+    else:
+        if i % 2 == 0:
+            b += int(a[i])
+        else:
+            b += 3*(int(a[i]))
+if c == 1:
+    if b % 10 != 0:
+        print(10-(b%10))
+    else:
+        print(0)
+else:
+    d = 10-(b%10)
+    if d == 1:
+        print(7)
+    elif d == 2:
+        print(4)
+    elif d == 3:
+        print(1)
+    elif d == 4:
+        print(8)
+    elif d == 5:
+        print(5)
+    elif d == 6:
+        print(2)
+    elif d == 7:
+        print(9)
+    elif d == 8:
+        print(6)
+    elif d == 9:
+        print(3)
+    else :
+        print(0)
