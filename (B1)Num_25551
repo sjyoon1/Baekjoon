@@ -1,0 +1,21 @@
+import sys
+input = sys.stdin.readline
+
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+c = list(map(int, input().split()))
+d = []
+e = []
+d.append(a[0])
+d.append(b[1])
+d.append(c[0])
+e.append(a[1])
+e.append(b[0])
+e.append(c[1])
+if min(d) == min(e):
+    print(min(d) * 2)
+else:
+    if min(d) > min(e):
+        print(min(e)*2 +1)
+    else:
+        print(min(d)*2 +1)
