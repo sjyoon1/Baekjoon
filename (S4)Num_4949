@@ -1,0 +1,46 @@
+while True:
+    a = input()
+    b = []
+    d = 0
+    if a == ".":
+        break
+    else:
+        if a[len(a)-1] != ".":
+            print("no")
+        else:
+            for i in range(len(a)-1):
+                if a[i] == "(":
+                    b.append("a")
+                elif a[i] == "[":
+                    b.append("b")
+                elif a[i] == ")":
+                    if len(b) != 0:
+                        if b[len(b)-1] == "a":
+                            b.pop()
+                        else:
+                            print("no")
+                            break
+                    else :
+                        print("no")
+                        d = 1
+                        break
+                elif a[i] == "]":
+                    if len(b) != 0:
+                        if b[len(b)-1] == "b":
+                            b.pop()
+                        else:
+                            print("no")
+                            break
+                    else:
+                        print("no")
+                        d = 1
+                        break
+                else:
+                    pass
+            else:
+                if len(b) == 0:
+                    pass
+                else:
+                    print("no")
+    if len(b) == 0 and d == 0:
+        print("yes")
