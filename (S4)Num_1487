@@ -1,0 +1,37 @@
+import sys
+input = sys.stdin.readline
+
+a = int(input())
+b = []
+d = []
+for i in range(a):
+    c = list(map(int, input().split()))
+    b.append(c)
+for i in range(a):
+    e = 0
+    for j in range(a):
+        if b[i][0] <= b[j][0]:
+            if b[i][0] > b[j][1]:
+                e += (b[i][0] - b[j][1])
+            else:
+                pass
+        else:
+            pass
+    d.append(e)
+
+if d.count(max(d)) == 1:
+    if max(d) <= 0:
+        print(0)
+    else:
+        print(b[d.index(max(d))][0])
+else:
+    if max(d) <= 0:
+        print(0)
+    else:
+        f = []
+        for i in range(len(d)):
+            if d[i] == max(d):
+                f.append(b[i][0])
+            else:
+                pass
+        print(min(f))
