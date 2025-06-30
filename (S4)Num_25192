@@ -1,0 +1,12 @@
+a = int(input())
+b = set()
+d = 0
+for i in range(a):
+    c = input()
+    if c == "ENTER":
+        d += len(b)
+        b = set()
+    else:
+        b.add(c)
+d += len(b)
+print(d)
