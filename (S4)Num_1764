@@ -1,0 +1,15 @@
+a = list(map(int, input().split()))
+b = set()
+c = set()
+for i in range(a[0]):
+    d = input()
+    b.add(d)
+for i in range(a[1]):
+    e = input()
+    c.add(e)
+f = b.intersection(c)
+print(len(f))
+f = list(f)
+f.sort()
+for i in range(len(f)):
+    print(f[i])
