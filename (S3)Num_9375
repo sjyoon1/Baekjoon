@@ -1,0 +1,17 @@
+a = int(input())
+for i in range(a):
+    b = int(input())
+    c = []
+    dic = {}
+    num = 1
+    for j in range(b):
+        d = list(map(str, input().split()))
+        c.append(d[1])
+    for k in c:
+        if k in dic:
+            dic[k] += 1
+        else:
+            dic[k] = 1
+    for i in list(dic.values()):
+        num *= (int(i)+1)
+    print(num - 1)
