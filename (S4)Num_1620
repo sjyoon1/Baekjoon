@@ -1,0 +1,13 @@
+a = list(map(int, input().split()))
+dic = {}
+dic1 = {}
+for i in range(a[0]):
+    b = input()
+    dic[b] = i+1
+    dic1[str(i+1)] = b
+for j in range(a[1]):
+    c = input()
+    if c.isdigit() == True:
+        print(dic1.get(c))
+    else:
+        print(dic.get(c))
