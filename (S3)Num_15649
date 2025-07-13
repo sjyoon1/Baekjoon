@@ -1,0 +1,12 @@
+import sys
+input = sys.stdin.readline
+from itertools import permutations
+
+a = list(map(int, input().split()))
+b = []
+for i in range(a[0]):
+    b.append(i+1)
+c = permutations(b, a[1])
+c = list(c)
+for i in c:
+    print(*i)
