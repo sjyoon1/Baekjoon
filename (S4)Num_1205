@@ -1,0 +1,28 @@
+import sys
+input = sys.stdin.readline
+
+a = list(map(int, input().split()))
+if a[0] == 0:
+    print(1)
+else:
+    b = list(map(int, input().split()))
+    if a[0] == a[2]:
+        if a[1] <= b[len(b)-1]:
+            print(-1)
+        else:
+            for i in range(a[0]):
+                if a[1] >= b[i]:
+                    print(i+1)
+                    break
+                else:
+                    pass
+    else:
+        if a[1] >= b[len(b)-1]:
+            for i in range(a[0]):
+                if a[1] >= b[i]:
+                    print(i+1)
+                    break
+                else:
+                    pass
+        else:
+            print(a[0]+1)
