@@ -1,0 +1,9 @@
+import sys
+input = sys.stdin.readline
+
+a = int(input())
+b = list(map(int, input().split()))
+c = 0
+for i in range(a):
+    print(((i+1)*b[i])-c, end= " ")
+    c = (i+1)*b[i]
