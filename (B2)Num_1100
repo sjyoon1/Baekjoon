@@ -1,0 +1,24 @@
+a = []
+c = 0
+for i in range(8):
+    b = input()
+    a.append(b)
+for i in range(8):
+    for j in range(8):
+        if i % 2 == 0:
+            if j % 2 == 0:
+                if a[i][j] == "F":
+                    c += 1
+                else:
+                    pass
+            else:
+                pass
+        else:
+            if j % 2 == 1:
+                if a[i][j] == "F":
+                    c += 1
+                else:
+                    pass
+            else:
+                pass
+print(c)
