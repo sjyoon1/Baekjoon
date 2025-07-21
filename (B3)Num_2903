@@ -1,0 +1,8 @@
+import sys
+input = sys.stdin.readline
+
+a = int(input())
+b = 2
+for i in range(a):
+    b = (b*2) - 1
+print(b**2)
