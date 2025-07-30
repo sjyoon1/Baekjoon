@@ -1,0 +1,29 @@
+a = int(input())
+for i in range(a):
+    b = int(input())
+    c = 0
+    d = 0
+    for i in range(b):
+        rsp1, rsp2 = map(str, input().split())
+        if rsp1 == rsp2:
+            pass
+        elif rsp1 == "R" and rsp2 == "P":
+            d += 1
+        elif rsp1 == "S" and rsp2 == "P":
+            c += 1
+        elif rsp1 == "S" and rsp2 == "R":
+            d += 1
+        elif rsp1 == "P" and rsp2 == "R":
+            c += 1
+        elif rsp1 == "R" and rsp2 == "S":
+            c += 1
+        elif rsp1 == "P" and rsp2 == "S":
+            d += 1
+        else:
+            pass
+    if c == d:
+        print("TIE")
+    elif c > d:
+        print("Player 1")
+    else:
+        print("Player 2")
