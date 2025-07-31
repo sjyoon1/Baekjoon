@@ -1,0 +1,20 @@
+a, b, c = map(int, input().split())
+d = int(input())
+e = (a + (d // 3600)) % 24
+f = b + ((d % 3600) // 60)
+g = c + (d % 60)
+if g >= 60:
+    f += 1
+    g -= 60
+else:
+    pass
+if f >= 60:
+    e += 1
+    f -= 60
+else:
+    pass
+if e >= 24:
+    e -= 24
+else:
+    pass
+print(e, f, g)
