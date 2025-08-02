@@ -1,0 +1,9 @@
+import sys
+input = sys.stdin.readline
+
+a, b = map(int, input().split())
+c = list(map(int, input().split()))
+if (b + a) > sum(c):
+    print("OUT")
+else:
+    print("DIMI")
