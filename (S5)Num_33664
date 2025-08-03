@@ -1,0 +1,13 @@
+B, N, M = map(int, input().split())
+dic = {}
+num = 0
+for _ in range(N):
+    i, p = map(str, input().split())
+    dic[i] = int(p)
+for _ in range(M):
+    j = input()
+    num += dic.get(j)
+if num > B:
+    print("unacceptable")
+else:
+    print("acceptable")
