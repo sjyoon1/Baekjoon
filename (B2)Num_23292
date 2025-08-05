@@ -1,0 +1,29 @@
+# import sys
+# input = sys.stdin.readline
+
+b = input()
+N = int(input())
+a = []
+d = []
+f = []
+for i in range(N):
+    c = input()
+    a.append(c)
+    e = 0
+    e1 = 0
+    e2 = 0
+    for i in range(4):
+        e += ((int(c[i]) - int(b[i]))**2)
+    for i in range(4, 6):
+        e1 += ((int(c[i]) - int(b[i]))**2)
+    for i in range(6, 8):
+        e2 += ((int(c[i]) - int(b[i]))**2)
+    e = e * e1 * e2
+    d.append(e)
+for i in range(N):
+    if d[i] == max(d):
+        f.append(a[i])
+    else:
+        pass
+f.sort()
+print(f[0])
