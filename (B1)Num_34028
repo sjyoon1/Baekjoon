@@ -1,0 +1,42 @@
+import sys
+input = sys.stdin.readline
+
+A, B, C = map(int, input().split())
+if A >= 2017:
+    num = 5
+    num += ((A - 2016) * 4)
+    if B >= 9 and B <= 11:
+        num += 3
+    elif B >= 6 and B <= 8:
+        num += 2
+    elif B >= 3 and B <= 5:
+        num += 1
+    elif B == 12:
+        num += 4
+    else:
+        pass
+elif A == 2015:
+    num = 1
+    if B >= 9 and B <= 11:
+        num += 3
+    elif B >= 6 and B <= 8:
+        num += 2
+    elif B >= 3 and B <= 5:
+        num += 1
+    elif B == 12:
+        num += 4
+    else:
+        pass
+else:
+    num = 5
+    if B >= 9 and B <= 11:
+        num += 3
+    elif B >= 6 and B <= 8:
+        num += 2
+    elif B >= 3 and B <= 5:
+        num += 1
+    elif B == 12:
+        num += 4
+    else:
+        pass
+print(num)
