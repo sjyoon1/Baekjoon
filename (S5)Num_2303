@@ -1,0 +1,17 @@
+import sys
+input = sys.stdin.readline
+from itertools import combinations
+
+N = int(input())
+a = []
+for i in range(N):
+    b = list(map(int, input().split()))
+    c = []
+    for j in combinations(b, 3):
+        c.append(sum(j) % 10)
+    a.append(max(c))
+d = []
+for i in range(N):
+    if a[i] == max(a):
+        d.append(i+1)
+print(max(d))
