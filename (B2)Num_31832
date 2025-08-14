@@ -1,0 +1,29 @@
+N = int(input())
+a = []
+c = []
+for i in range(N):
+    b = input()
+    a.append(b)
+for i in a:
+    if len(i) > 10:
+        c.append(i)
+    elif i.isdigit() == True:
+        c.append(i)
+    else:
+        d = 0
+        e = 0
+        for j in range(len(i)):
+            if i[j].isupper():
+                d += 1
+            elif i[j].islower():
+                e += 1
+            else:
+                pass
+        if d > e:
+            c.append(i)
+        else:
+            pass
+for i in c:
+    if i in a:
+        a.remove(i)
+print(a[0])
