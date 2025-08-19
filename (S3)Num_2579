@@ -1,0 +1,17 @@
+import sys
+input = sys.stdin.readline
+
+n = int(input())
+st = []
+for i in range(n):
+    a = int(input())
+    st.append(a)
+b = []
+b.append(st[0])
+if n >= 2:
+    b.append(st[0]+st[1])
+    if n >= 3:
+        b.append(max(st[0]+st[2], st[1]+st[2]))
+        for i in range(3, n):
+            b.append(max(b[i-3]+st[i-1]+st[i], b[i-2]+st[i]))
+print(b[n-1])
