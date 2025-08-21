@@ -1,0 +1,13 @@
+N, P = map(str, input().split())
+N = int(N)
+b = []
+for i in range(N):
+    a = input()
+    b.append(a)
+c = set(b)
+if P == "Y":
+    print(len(c))
+elif P == "F":
+    print(len(c)//2)
+else:
+    print(len(c)//3)
