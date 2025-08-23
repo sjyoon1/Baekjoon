@@ -1,0 +1,11 @@
+import sys
+input = sys.stdin.readline
+
+a1 = int(input())
+a2 = int(input())
+a3 = int(input())
+b1 = int(input())
+b2 = int(input())
+c = [a1, a2, a3]
+d = [b1, b2]
+print(min(c)+min(d)-50)
