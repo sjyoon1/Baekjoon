@@ -1,0 +1,21 @@
+import sys
+input = sys.stdin.readline
+
+N, B = map(int, input().split())
+a = []
+if N == 0:
+    print(0)
+else:
+    while True:
+        c = N % B
+        N //= B
+        a.append(c)
+        if N == 0:
+            break
+        else:
+            pass
+    for i in range(len(a)):
+        if a[len(a)-i-1] < 10:
+            print(a[len(a)-i-1], end="")
+        else:
+            print(chr(a[len(a)-i-1]+55), end="")
