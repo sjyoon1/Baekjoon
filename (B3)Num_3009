@@ -1,0 +1,14 @@
+import sys
+input = sys.stdin.readline
+
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+c = list(map(int, input().split()))
+d = [a[0], b[0], c[0]]
+e = [a[1], b[1], c[1]]
+for i in d:
+    if d.count(i) == 1:
+        print(i, end=" ")
+for i in e:
+    if e.count(i) == 1:
+        print(i)
