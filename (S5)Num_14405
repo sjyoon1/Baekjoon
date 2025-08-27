@@ -1,0 +1,48 @@
+S = input()
+i = 0
+while True:
+    if i == len(S):
+        print("YES")
+        break
+    else:
+        pass
+
+    if S[i] == "p":
+        i += 1
+        if i < len(S):
+            if S[i] == "i":
+                i += 1
+                continue
+            else:
+                print("NO")
+                break
+        else:
+            print("NO")
+            break
+    elif S[i] == "k":
+        i += 1
+        if i < len(S):
+            if S[i] == "a":
+                i += 1
+                continue
+            else:
+                print("NO")
+                break
+        else:
+            print("NO")
+            break
+    elif S[i] == "c":
+        i += 1
+        if i < len(S):
+            if S[i:i+2] == "hu":
+                i += 2
+                continue
+            else:
+                print("NO")
+                break
+        else:
+            print("NO")
+            break
+    else:
+        print("NO")
+        break
