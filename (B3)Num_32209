@@ -1,0 +1,19 @@
+import sys
+input = sys.stdin.readline
+
+Q = int(input())
+f = 0
+c = 0
+for _ in range(Q):
+    a, b = map(int, input().split())
+    if a == 1:
+        f += b
+    else:
+        f -= b
+    
+    if f < 0:
+        c = 1
+if c == 1:
+    print("Adios")
+else:
+    print("See you next month")
