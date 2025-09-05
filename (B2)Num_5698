@@ -1,0 +1,29 @@
+# import sys
+# input = sys.stdin.readline
+
+while True:
+    T = list(map(str, input().split()))
+    if T[0] == "*":
+        break
+    else:
+        if T[0][0].isupper():
+            a = T[0][0].lower()
+        else:
+            a = T[0][0]
+        for i in T:
+            if i[0].isupper():
+                if i[0].lower() == a:
+                    b = 0
+                else:
+                    b = 1
+                    break
+            else:
+                if i[0] == a:
+                    b = 0
+                else:
+                    b = 1
+                    break
+        if b == 0:
+            print("Y")
+        else:
+            print("N")
