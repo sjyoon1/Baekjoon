@@ -1,0 +1,16 @@
+N = int(input())
+a = list(map(int, input().split()))
+b = []
+for i in a:
+    if i == 0:
+        b.append(" ")
+    elif i >= 1 and i <= 26:
+        b.append(chr(i+64))
+    else:
+        b.append(chr(i+70))
+c = input()
+d = [i for i in c]
+if sorted(b) == sorted(d):
+    print("y")
+else:
+    print("n")
