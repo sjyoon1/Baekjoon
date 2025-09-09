@@ -1,0 +1,11 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+a = list(map(int, input().split()))
+a.sort()
+b = 0
+for i in range(N-1, 0, -1):
+    b += (a[i] - a[i-1])
+b += a[len(a)-1] - a[0]
+print(b)
