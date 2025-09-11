@@ -1,0 +1,17 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+a = list(map(int, input().split()))
+b = []
+c = 1
+d = 1
+for i in range(1, N):
+    if a[i] >= a[i-1]:
+        d += 1
+    else:
+        b.append(d)
+        c += 1
+        d = 1
+b.append(d)
+print(c, max(b))
