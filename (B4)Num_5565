@@ -1,0 +1,6 @@
+a = int(input())
+b = []
+for i in range(9):
+    c = int(input())
+    b.append(c)
+print(a-sum(b))
