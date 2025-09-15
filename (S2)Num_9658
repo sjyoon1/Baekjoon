@@ -1,0 +1,6 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+b = ["CY", "SK", "CY", "SK", "SK", "SK", "SK"]
+print(b[(N%7)-1])
