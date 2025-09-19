@@ -1,0 +1,26 @@
+import sys
+input = sys.stdin.readline
+
+Q = int(input())
+dic = {}
+for _ in range(Q):
+    a, b = map(int, input().split())
+    c = []
+    if a == 2:
+        if b in dic:
+            dic[b] += 4
+        else:
+            dic[b] = 4
+    elif a == 1:
+        for i in range(4):
+            if b+i in dic:
+                c.append(dic[b+i])
+            else:
+                c.append(0)
+        for i in range(4):
+            dic[b+i] = max(c) + 1
+    else:
+        if b in dic:
+            print(dic[b])
+        else:
+            print(0)
