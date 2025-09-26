@@ -1,0 +1,20 @@
+N = int(input())
+M = input()
+K = int(input())
+a = 0
+if "1" not in M:
+    print("YES")
+    exit(0)
+    
+if K >= N:
+    print("NO")
+else:
+    for i in range(N-K, N):
+        if int(M[i]) == 1:
+            print("NO")
+            a = 1
+            break
+        else:
+            pass
+    if a == 0:
+        print("YES")
