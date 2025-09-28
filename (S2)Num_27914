@@ -1,0 +1,19 @@
+import sys
+input = sys.stdin.readline
+
+N, K, Q = map(int, input().split())
+A = list(map(int, input().split()))
+X = list(map(int, input().split()))
+a = []
+b = 0
+c = 0
+for i in A:
+    if i == K:
+        a.append(b)
+        c = 0
+    else:
+        c += 1
+        b += c
+        a.append(b)
+for i in X:
+    print(a[i-1])
