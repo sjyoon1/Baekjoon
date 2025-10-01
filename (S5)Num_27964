@@ -1,0 +1,11 @@
+N = int(input())
+a = list(map(str, input().split()))
+b = []
+for i in a:
+    if i[len(i)-6:len(i)] == "Cheese":
+        b.append(i)
+b = set(b)
+if len(b) >= 4:
+    print("yummy")
+else:
+    print("sad")
