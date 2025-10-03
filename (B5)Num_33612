@@ -1,0 +1,7 @@
+a = 2024
+N = int(input())
+b = 8 + (7*(N-1))
+if N == 5:
+    print(2026, 12)
+else:
+    print(a+(b//12), b % 12)
