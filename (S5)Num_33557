@@ -1,0 +1,24 @@
+import sys
+input = sys.stdin.readline
+
+T = int(input())
+for _ in range(T):
+    A, B = map(str, input().split())
+    a = A
+    b = B
+    c = []
+    d = ""
+    if len(A) == len(B):
+        pass
+    elif len(A) > len(B):
+        b = "1" * (len(A)-len(B)) + B
+    else:
+        a = "1" * (len(B)-len(A)) + A
+    for i in range(max(len(A), len(B))):
+        c.append(int(a[i]) * int(b[i]))
+    for j in c:
+        d += str(j)
+    if int(d) == int(A) * int(B):
+        print(1)
+    else:
+        print(0)
