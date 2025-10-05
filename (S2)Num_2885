@@ -1,0 +1,28 @@
+import sys
+input = sys.stdin.readline
+
+K = int(input())
+a = [2**i for i in range(24)]
+for i in range(23, -1, -1):
+    if a[i] == K:
+        b = a[i]
+        break
+    elif a[i] < K:
+        b = a[i+1]
+        break
+c = 0
+d = b
+if K == b:
+    print(K, 0)
+else:
+    while True:
+        d = d // 2
+        if K >= d:
+            c += 1
+            K -= d
+        else:
+            c += 1
+            pass
+        if K == 0:
+            break
+    print(b, c)
