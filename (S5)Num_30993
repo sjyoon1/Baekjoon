@@ -1,0 +1,19 @@
+import sys
+input = sys.stdin.readline
+
+N, A, B, C = map(int, input().split())
+a = 1
+a1 = 1
+b = 1
+b1 = 1
+for i in range(A):
+    a *= N
+    N -= 1
+    a1 *= (i + 1)
+a //= a1
+for i in range(B):
+    b *= N
+    N -= 1
+    b1 *= (i + 1)
+b //= b1
+print(a*b)
