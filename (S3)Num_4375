@@ -1,0 +1,18 @@
+import sys
+input = sys.stdin.readline
+
+while True:
+    try:
+        n = int(input())
+        if n == 0:
+            break
+        b = str(1)
+        while True:
+            if int(b) % n == 0:
+                print(len(b))
+                break
+            else:
+                b += str(1)
+    except:
+        break
+
