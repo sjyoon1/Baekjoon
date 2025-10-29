@@ -1,0 +1,22 @@
+import sys
+input = sys.stdin.readline
+
+L = int(input())
+a = input()
+b = [[0, 0]]
+c = 0
+d = 0
+for i in range(L):
+    if a[i] == "S":
+        d -= 1
+    elif a[i] == "N":
+        d += 1
+    elif a[i] == "E":
+        c += 1
+    else:
+        c -= 1
+    if [c, d] in b:
+        pass
+    else:
+        b.append([c, d])
+print(len(b))
