@@ -1,0 +1,11 @@
+import sys
+input = sys.stdin.readline
+import math
+
+N, M, K = map(int, input().split())
+a = min(N//2, M)
+if (N + M - K) >= (3*a):
+    print(a)
+else:
+    b = math.ceil(((3*a) - (N + M - K))/3)
+    print(a - b)
