@@ -1,0 +1,17 @@
+a = [0, 0, 0, 0]
+b = "0123456789"
+N = int(input())
+S = input()
+for i in range(len(S)):
+    if ord(S[i]) >= 65 and ord(S[i]) <= 90:
+        a[0] += 1
+    elif ord(S[i]) >= 97 and ord(S[i]) <= 122:
+        a[1] += 1
+    elif S[i] in b:
+        a[2] += 1
+    else:
+        a[3] += 1
+if a.count(0) + len(S) < 6:
+    print(6-len(S))
+else:
+    print(a.count(0))
