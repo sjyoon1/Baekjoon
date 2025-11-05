@@ -1,0 +1,11 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+a = []
+b = []
+for i in range(N):
+    T, B = map(int, input().split())
+    a.append(T)
+    b.append(B)
+print(((max(a) * min(b)) % 7) + 1)
