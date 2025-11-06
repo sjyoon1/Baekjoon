@@ -1,0 +1,30 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+sq = []
+c = 0
+for i in range(N):
+    m = list(map(int, input().split()))
+    sq.append(m)
+a, b = map(int, input().split())
+if a >= 0:
+    for i in range(N):
+        if a * sq[i][2] + b <= (sq[i][1] + sq[i][3]) / 2:
+            c += 1
+        else:
+            if ((a * sq[i][0] + b) + (a * sq[i][2] + b)) / 2 <= (sq[i][1] + sq[i][3]) / 2:
+                c += 1
+            else:
+                pass
+else:
+    for i in range(N):
+        if a * sq[i][0] + b <= (sq[i][1] + sq[i][3]) / 2:
+            c += 1
+        else:
+            if ((a * sq[i][0] + b) + (a * sq[i][2] + b)) / 2 <= (sq[i][1] + sq[i][3]) / 2:
+                c += 1
+            else:
+                pass
+
+print(c)
