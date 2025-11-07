@@ -1,0 +1,15 @@
+import sys
+input = sys.stdin.readline
+from collections import deque
+
+N, K = map(int, input().split())
+a = deque([i for i in range(1, N + 1)])
+while True:
+    a.rotate(-1)
+    for i in range(K - 1):
+        a.popleft()
+        if len(a) == 1:
+            break
+    if len(a) == 1:
+        break
+print(a[0]) 
