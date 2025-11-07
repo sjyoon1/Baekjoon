@@ -1,0 +1,21 @@
+import sys
+input = sys.stdin.readline
+
+a = ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]
+while True:
+    M = list(map(str, input().split()))
+    if M == ["***"]:
+        break
+    else:
+        b = int(input())
+        for i in M:
+            if i in a:
+                print(a[(a.index(i)+b)%12], end=" ")
+            else:
+                if i[-1] == "#":
+                    print(a[(a.index(i[0:-1])+b+1)%12], end=" ")
+                else:
+                    print(a[(a.index(i[0:-1])+b-1)%12], end=" ")
+
+        print()
+            
