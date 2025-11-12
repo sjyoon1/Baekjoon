@@ -1,0 +1,17 @@
+import sys
+input = sys.stdin.readline
+
+a = []
+for i in range(10):
+    b = int(input())
+    a.append(b)
+c = set(a)
+print(sum(a) // 10)
+d = 0
+for i in c:
+    if a.count(i) >= d:
+        d = a.count(i)
+for i in c:
+    if d == a.count(i):
+        print(i)
+        break
