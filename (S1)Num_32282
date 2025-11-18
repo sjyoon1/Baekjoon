@@ -1,0 +1,15 @@
+import sys
+input = sys.stdin.readline
+import math
+
+X, Y, c = map(int, input().split())
+a = math.sqrt(X**2 + Y**2)
+
+if X == 0 and Y == 0:
+    print(0)
+elif c == a:
+    print(1)
+elif c > a:
+    print(2)
+else:
+    print(math.ceil(a/c))
