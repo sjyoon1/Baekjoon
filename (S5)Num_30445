@@ -1,0 +1,22 @@
+a = input()
+b = "HAPPY"
+c = "SAD"
+H = 0
+G = 0
+for i in a:
+    if i == "A":
+        H += 1
+        G += 1
+    elif i in b:
+        H += 1
+    elif i in c:
+        G += 1
+
+if H == 0 and G == 0:
+    print(f"{50:.2f}")
+else:
+    D = (H * 100000) // (H + G)
+    if D % 10 >= 5:
+        D += 10
+    D //= 10
+    print(f"{(D * 0.01):.2f}")
