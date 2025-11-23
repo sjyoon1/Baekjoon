@@ -1,0 +1,26 @@
+N = int(input())
+B, S, G, P = map(int, input().split())
+a = input()
+c = []
+if a[0] == "B":
+    c.append(B-1)
+elif a[0] == "S":
+    c.append(S-1)
+elif a[0] == "G":
+    c.append(G-1)
+elif a[0] == "P":
+    c.append(P-1)
+else:    
+    c.append(P)
+for i in range(1, N):
+    if a[i] == "B":
+        c.append(B-c[i-1]-1)
+    elif a[i] == "S":
+        c.append(S-c[i-1]-1)
+    elif a[i] == "G":
+        c.append(G-c[i-1]-1)
+    elif a[i] == "P":
+        c.append(P-c[i-1]-1)
+    else:    
+        c.append(P)
+print(sum(c))
