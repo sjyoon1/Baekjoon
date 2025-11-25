@@ -1,0 +1,10 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+H = list(map(int, input().split()))
+H.sort(reverse=True)
+H1 = 0
+for i in range(N):
+    H1 = (H1 + H1 + H[i])
+print(H1 % (10**9 + 7))
