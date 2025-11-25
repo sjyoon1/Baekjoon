@@ -1,0 +1,160 @@
+import sys
+input = sys.stdin.readline
+
+a = [0 for _ in range(12)]
+for _ in range(7):
+    m, d = map(int, input().split())
+    if m == 1:
+        if d >= 20:
+            a[0] += 1
+        else:
+            a[11] += 1
+    elif m == 2:
+        if d >= 19:
+            a[1] += 1
+        else:
+            a[0] += 1
+    elif m == 3:
+        if d >= 21:
+            a[2] += 1
+        else:
+            a[1] += 1
+    elif m == 4:
+        if d >= 20:
+            a[3] += 1
+        else:
+            a[2] += 1
+    elif m == 5:
+        if d >= 21:
+            a[4] += 1
+        else:
+            a[3] += 1
+    elif m == 6:
+        if d >= 22:
+            a[5] += 1
+        else:
+            a[4] += 1
+    elif m == 7:
+        if d >= 23:
+            a[6] += 1
+        else:
+            a[5] += 1
+    elif m == 8:
+        if d >= 23:
+            a[7] += 1
+        else:
+            a[6] += 1
+    elif m == 9:
+        if d >= 23:
+            a[8] += 1
+        else:
+            a[7] += 1
+    elif m == 10:
+        if d >= 23:
+            a[9] += 1
+        else:
+            a[8] += 1
+    elif m == 11:
+        if d >= 23:
+            a[10] += 1
+        else:
+            a[9] += 1
+    elif m == 12:
+        if d >= 22:
+            a[11] += 1
+        else:
+            a[10] += 1
+N = int(input())
+b = []
+for i in range(N):
+    m, d = map(int, input().split())
+    if m == 1:
+        if d >= 20:
+            if a[0] == 0:
+                b.append([m, d])
+        else:
+            if a[11] == 0:
+                b.append([m, d])
+    elif m == 2:
+        if d >= 19:
+            if a[1] == 0:
+                b.append([m, d])
+        else:
+            if a[0] == 0:
+                b.append([m, d])
+    elif m == 3:
+        if d >= 21:
+            if a[2] == 0:
+                b.append([m, d])
+        else:
+            if a[1] == 0:
+                b.append([m, d])
+    elif m == 4:
+        if d >= 20:
+            if a[3] == 0:
+                b.append([m, d])
+        else:
+            if a[2] == 0:
+                b.append([m, d])
+    elif m == 5:
+        if d >= 21:
+            if a[4] == 0:
+                b.append([m, d])
+        else:
+            if a[3] == 0:
+                b.append([m, d])
+    elif m == 6:
+        if d >= 22:
+            if a[5] == 0:
+                b.append([m, d])
+        else:
+            if a[4] == 0:
+                b.append([m, d])
+    elif m == 7:
+        if d >= 23:
+            if a[6] == 0:
+                b.append([m, d])
+        else:
+            if a[5] == 0:
+                b.append([m, d])
+    elif m == 8:
+        if d >= 23:
+            if a[7] == 0:
+                b.append([m, d])
+        else:
+            if a[6] == 0:
+                b.append([m, d])
+    elif m == 9:
+        if d >= 23:
+            if a[8] == 0:
+                b.append([m, d])
+        else:
+            if a[7] == 0:
+                b.append([m, d])
+    elif m == 10:
+        if d >= 23:
+            if a[9] == 0:
+                b.append([m, d])
+        else:
+            if a[8] == 0:
+                b.append([m, d])
+    elif m == 11:
+        if d >= 23:
+            if a[10] == 0:
+                b.append([m, d])
+        else:
+            if a[9] == 0:
+                b.append([m, d])
+    elif m == 12:
+        if d >= 22:
+            if a[11] == 0:
+                b.append([m, d])
+        else:
+            if a[10] == 0:
+                b.append([m, d])
+if len(b) == 0:
+    print("ALL FAILED")
+else:
+    b.sort()
+    for i in b:
+        print(*i)
