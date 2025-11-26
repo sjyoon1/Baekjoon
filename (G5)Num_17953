@@ -1,0 +1,22 @@
+import sys
+input = sys.stdin.readline
+
+N, M = map(int, input().split())
+D = [[] for _ in range(N)]
+for i in range(M):
+    a = list(map(int, input().split()))
+    for j in range(N):
+        D[j].append(a[j])
+if M == 1:
+    b = D[0][0]
+    for i in range(1, N):
+        b += (D[i][0]//2)
+    print(b)
+else:   
+    for i in range(1, N):
+        for j in range(M):
+            b = [_ for _ in D[i-1]]
+            c = D[i-1][j]
+            b.remove(c)
+            D[i][j] = max(c+(D[i][j]//2), max(b)+D[i][j])
+    print(max(max(D)))
