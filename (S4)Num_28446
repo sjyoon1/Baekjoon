@@ -1,0 +1,11 @@
+import sys
+input = sys.stdin.readline
+
+M = int(input())
+dic = dict()
+for _ in range(M):
+    a = list(map(int, input().split()))
+    if a[0] == 1:
+        dic[a[2]] = a[1]
+    else:
+        print(dic[a[1]])
