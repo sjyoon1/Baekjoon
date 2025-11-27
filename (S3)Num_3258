@@ -1,0 +1,27 @@
+import sys
+input = sys.stdin.readline
+
+N, Z, M = map(int, input().split())
+m = list(map(int, input().split()))
+for i in range(1, N):
+    b = 1
+    c = 0
+    d = 0
+    while True:
+        if b in m:
+            break
+        else:
+            if b == Z:
+                print(i)
+                c = 1
+                break
+            else:
+                if b + i > N:
+                    b = b + i - N
+                else:
+                    b += i
+        d += 1
+        if d > N:
+            break
+    if c == 1:
+        break
