@@ -1,0 +1,23 @@
+import sys
+input = sys.stdin.readline
+
+n = int(input())
+a = 1
+st = []
+c = []
+for i in range(n):
+    b = int(input())
+    while a <= b:
+        st.append(a)
+        a += 1
+        c.append("+")
+    if b == st[-1]:
+        st.pop()
+        c.append("-")
+    else:
+        print("NO")
+        c.append(1)
+        break
+if 1 not in c:
+    for i in c:
+        print(i)
