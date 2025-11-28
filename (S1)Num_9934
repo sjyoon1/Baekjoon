@@ -1,0 +1,17 @@
+import sys
+input = sys.stdin.readline
+
+K = int(input())
+a = list(map(int, input().split()))
+d = [i for i in a]
+b =[]
+for i in range(K, 0, -1):
+    c = []
+    for j in range((2**i)-1):
+        if j % 2 == 0:
+            c.append(a[j])
+            d.remove(a[j])
+    b.append(c)
+    a = [_ for _ in d]
+for i in range(len(b)-1, -1, -1):
+    print(*b[i])
