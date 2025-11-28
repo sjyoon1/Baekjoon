@@ -1,0 +1,20 @@
+import sys
+input = sys.stdin.readline
+
+L = int(input())
+N = int(input())
+a = [0 for i in range(L+1)]
+e = []
+for i in range(N):
+    b, c = map(int, input().split())
+    for j in range(b, c+1):
+        if a[j] == 0:
+            a[j] = i+1
+        else:
+            pass
+    e.append(c-b)
+print(e.index(max(e))+1)
+d = []
+for i in range(N):
+    d.append(a.count(i+1))
+print(d.index(max(d))+1)
