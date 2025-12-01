@@ -1,0 +1,34 @@
+import sys
+input = sys.stdin.readline
+
+N, K = map(int, input().split())
+c = 0
+for i in range(K-1):
+    a = 1
+    while True:
+        if a > N:
+            break
+        else:
+            a *= 2
+    N -= (a//2)
+    if N < K - i - 1:
+        print(0)
+        c = 1
+        break
+if c == 1:
+    pass
+else:
+    b = 1
+    d = 0
+    while True:
+        if b > N:
+            break
+        elif b == N:
+            d = 1
+            break
+        else:
+            b *= 2
+    if d == 1:
+        print(0)
+    else:
+        print(b - N)
