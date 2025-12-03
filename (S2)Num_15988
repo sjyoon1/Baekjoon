@@ -1,0 +1,10 @@
+import sys
+input = sys.stdin.readline
+
+a = int(input())
+n = [1, 2, 4]
+for i in range(3, (10**6)):
+    n.append((n[i-3] + n[i-2] + n[i-1])%((10**9)+9))
+for i in range(a):
+    b = int(input())
+    print(n[b-1])
