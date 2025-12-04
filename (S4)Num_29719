@@ -1,0 +1,11 @@
+import sys
+input = sys.stdin.readline
+
+a = (10**9) + 7
+N, M = map(int, input().split())
+b = ((M**N)%a) - (((M-1)**N)%a)
+if b < 0:
+    b += a
+    print(b)
+else:
+    print(b)
