@@ -1,0 +1,14 @@
+import sys
+input = sys.stdin.readline
+from itertools import combinations
+
+li = []
+for i in range(9):
+    a = int(input())
+    li.append(a)
+b = list(combinations(li, 7))
+
+for i in b:
+    if sum(i) == 100:
+        for j in i:
+            print(j)
