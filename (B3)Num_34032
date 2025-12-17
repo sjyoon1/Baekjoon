@@ -1,0 +1,6 @@
+N = int(input())
+li = input()
+if li.count("O") >= li.count("X"):
+    print("Yes")
+else:
+    print("No")
