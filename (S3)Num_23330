@@ -1,0 +1,10 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+x = list(map(int, input().split()))
+x.sort()
+num = 0
+for i in range(N):
+    num += 2*(-N+1+(2*i))*x[i]
+print(num)
