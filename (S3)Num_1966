@@ -1,0 +1,22 @@
+import sys
+input = sys.stdin.readline
+from collections import deque
+
+T = int(input())
+for i in range(T):
+    n, m = map(int, input().split())
+    que = deque(list(map(int, input().split())))
+    a = 0
+    while m != -1:
+        M = max(que)
+        b = que.popleft()
+        if b >= M:
+            m -= 1
+            a += 1
+        elif b < M:
+            que.append(b)
+            if m == 0:
+                m = len(que) - 1
+            else:
+                m -= 1
+    print(a)
