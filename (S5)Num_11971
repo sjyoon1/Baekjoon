@@ -1,0 +1,19 @@
+import sys
+input = sys.stdin.readline
+
+N, M = map(int, input().split())
+A = []
+B = []
+for i in range(N):
+    a, b = map(int, input().split())
+    for i in range(a):
+        A.append(b)
+for i in range(M):
+    a, b = map(int, input().split())
+    for i in range(a):
+        B.append(b)
+c = 0
+for i in range(100):
+    if B[i] - A[i] > c:
+        c = B[i] - A[i]
+print(c)
