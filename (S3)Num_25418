@@ -1,0 +1,14 @@
+import sys
+input = sys.stdin.readline
+
+a, k = map(int, input().split())
+b = 0
+while True:
+    if a == k:
+        print(b)
+        break
+    if k % 2 == 0 and k >= a*2:
+        k //= 2
+    else:
+        k -= 1
+    b += 1
