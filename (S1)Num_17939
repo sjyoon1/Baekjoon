@@ -1,0 +1,14 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+j = list(map(int, input().split()))
+j.reverse()
+a = j[0]
+b = 0
+for i in range(N):
+    if j[i] > a:
+        a = j[i]
+    else:
+        b += (a - j[i])
+print(b)
