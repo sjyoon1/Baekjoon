@@ -1,0 +1,14 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+a = []
+for i in range(N):
+    l = int(input())
+    a.append(l)
+a.sort(reverse=True)
+
+b = []
+for i in range(N):
+    b.append(a[i]*(i+1))
+print(max(b))
