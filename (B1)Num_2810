@@ -1,0 +1,10 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+s = input()
+a = N + 1 - (s.count("L") // 2)
+if a > N:
+    print(N)
+else:
+    print(a)
