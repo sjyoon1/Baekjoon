@@ -1,0 +1,17 @@
+import sys
+input = sys.stdin.readline
+from itertools import combinations
+
+N, M, K = map(int, input().split())
+
+ans = 0
+a = [*combinations([i for i in range(N)], M)] 
+
+for i in a:
+  cnt = 0
+  for j in range(M):
+    if i[j] < M: 
+      cnt += 1
+  if cnt >= K: 
+    ans += 1
+print(ans / len(a))
