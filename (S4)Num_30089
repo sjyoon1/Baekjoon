@@ -1,0 +1,13 @@
+T = int(input())
+for i in range(T):
+    S = input()
+    s = [i for i in S]
+    for i in range(len(S)):
+        s1 = [i for i in s]
+        s1.reverse()
+        if s[:len(S)] == s1[:len(S)]:
+            print(*s, sep="")
+            break
+        else:
+            pass
+        s.insert(len(S), S[i])
