@@ -1,0 +1,19 @@
+import sys
+input = sys.stdin.readline
+
+g = []
+def fib(a):
+    if a > 10**9:
+        return
+    if a != 0:
+        g.append(a)
+    fib(a*10 + 4)
+    fib(a*10 + 7)
+fib(0)
+
+A, B = map(int, input().split())
+c = 0
+for i in g:
+    if i >= A and i <= B:
+        c += 1
+print(c)
