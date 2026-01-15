@@ -1,0 +1,6 @@
+import sys
+input = sys.stdin.readline
+import math
+
+N, M = map(int, input().split(":"))
+print(N//(math.gcd(N,M)), ":" ,M//(math.gcd(N,M)), sep="")
