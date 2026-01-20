@@ -1,0 +1,16 @@
+import sys
+input = sys.stdin.readline
+
+N = input().rstrip()
+num = 0
+while True:
+    num += 1
+    n = str(num)
+    while len(n) > 0 and len(N) > 0:
+        if n[0] == N[0]:
+            N = N[1:]
+        n = n[1:]
+    if N == "":
+        print(num)
+        break
+        
