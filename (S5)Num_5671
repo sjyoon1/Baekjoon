@@ -1,0 +1,18 @@
+import sys
+input = sys.stdin.readline
+
+while True:
+    try:
+        N, M = map(int, input().split())
+        c = 0
+        for i in range(N, M+1):
+            n = str(i)
+            a = []
+            for j in range(len(n)):
+                a.append(n[j])
+            b = set(a)
+            if len(a) == len(b):
+                c += 1
+        print(c)
+    except:
+        break
