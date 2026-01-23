@@ -1,0 +1,19 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+dic = dict([])
+for i in range(N):
+    a = int(input())
+    if a in dic:
+        dic[a] += 1
+    else:
+        dic[a] = 1
+b = max(dic.values())
+c = []
+d = [*dic.keys()]
+for i in d:
+    if dic[i] == b:
+        c.append(i)
+c.sort()
+print(c[0])
