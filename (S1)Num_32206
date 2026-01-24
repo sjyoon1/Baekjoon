@@ -1,0 +1,10 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+S = input().rstrip()
+s = set([i for i in S])
+num = 0
+num += ((26-len(s))*(N+1))
+num += ((len(s)*N)-(N-len(s)))
+print(num)
