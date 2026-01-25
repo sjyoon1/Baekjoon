@@ -1,0 +1,13 @@
+import sys
+input = sys.stdin.readline
+
+N, M = map(int, input().split())
+b = [i for i in range(N+1)]
+for i in range(M):
+    a1, a2 = map(int, input().split())
+    c = b[a1]
+    d = b[a2]
+    b[a1] = d
+    b[a2] = c
+b.remove(0)
+print(*b)
