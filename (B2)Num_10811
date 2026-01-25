@@ -1,0 +1,15 @@
+import sys
+input = sys.stdin.readline
+
+N, M = map(int, input().split())
+b = [i for i in range(N+1)]
+for i in range(M):
+    a1, a2 = map(int, input().split())
+    c = b[a1:a2+1]
+    c.reverse()
+    m = 0
+    for j in range(a1, a2+1):
+        b[j] = c[m]
+        m += 1
+b.remove(0)
+print(*b)
