@@ -1,0 +1,22 @@
+import sys
+input = sys.stdin.readline
+
+a = input().rstrip()
+b = input().rstrip()
+c = []
+d = []
+c.append(a.count("B"))
+c.append(a.count("G"))
+c.append(a.count("Y"))
+c.append(a.count("R"))
+d.append(b.count("B"))
+d.append(b.count("G"))
+d.append(b.count("Y"))
+d.append(b.count("R"))
+m = 0
+for i in range(4):
+    if c[i] - d[i] >= 0:
+        m += (c[i] - d[i])
+    else:
+        m += (d[i] - c[i])
+print(m//2)
