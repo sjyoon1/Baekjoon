@@ -1,0 +1,16 @@
+import sys
+input = sys.stdin.readline
+
+n = int(input())
+dic = dict()
+for i in range(n):
+    A, B = map(str, input().split())
+    if B == "enter":
+        dic[A] = 1
+    else:
+        del dic[A]
+
+a = sorted(dic.keys())
+a.reverse()
+for i in a:
+    print(i)
