@@ -1,0 +1,10 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+b = list(map(int, input().split()))
+b = set(b)
+sorted(b)
+a = [i for i in b]
+a.sort()
+print(*a)
