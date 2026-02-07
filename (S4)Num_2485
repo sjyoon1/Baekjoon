@@ -1,0 +1,16 @@
+import sys
+input = sys.stdin.readline
+import math
+
+N = int(input())
+a = []
+a.append(int(input()))
+c = []
+for i in range(N-1):
+    b = int(input())
+    a.append(b)
+    c.append(b-a[i])
+d = math.gcd(*c)
+print((sum(c)-((N-1)*d))//d)
+
+
