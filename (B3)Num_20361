@@ -1,0 +1,15 @@
+import sys
+input = sys.stdin.readline
+
+N, X, K = map(int, input().split())
+c = [0 for i in range(N+1)]
+c[X] = 1
+for i in range(K):
+    A, B = map(int, input().split())
+    if c[A] == 1:
+        c[A] = 0
+        c[B] = 1
+    elif c[B] == 1:
+        c[A] = 1
+        c[B] = 0
+print(c.index(1))
