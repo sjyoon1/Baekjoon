@@ -1,0 +1,15 @@
+import sys, math
+input = sys.stdin.readline
+
+N = int(input())
+if N < 5:
+    print(4)
+else:
+    a = int(math.sqrt(N))
+    b = N % (a**2)
+    if b == 0:
+        print((a-1)*4)
+    elif b <= a:
+        print((a-1)*4 + 2)
+    else:
+        print((a-1)*4 + 4)
