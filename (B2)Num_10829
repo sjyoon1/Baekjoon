@@ -1,0 +1,6 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+a = bin(N)[2:]
+print(a)
