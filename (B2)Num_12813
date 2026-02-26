@@ -1,0 +1,16 @@
+import sys
+input = sys.stdin.readline
+
+A = input().rstrip()
+B = input().rstrip()
+a = int(A, 2)
+b = int(B, 2)
+
+print(bin(a&b)[2:].zfill(len(A)))
+print(bin(a|b)[2:].zfill(len(A)))
+print(bin(a^b)[2:].zfill(len(A)))
+for i in range(len(A)):
+    print(1-int(A[i]), end="")
+print()
+for i in range(len(B)):
+    print(1-int(B[i]), end="")
