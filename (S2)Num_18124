@@ -1,0 +1,13 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+a = 1
+while True:
+    if a >= N:
+        a //= 2
+        break
+    else:
+        a *= 2
+b = a + (a//2)
+print(b+((N-a-1)//2))
