@@ -1,0 +1,18 @@
+import sys
+input = sys.stdin.readline
+
+al = [3, 2, 1, 2, 3, 3, 2, 3, 3, 2, 2, 1, 2, 2, 1, 2, 2, 2, 1, 2, 1, 1, 1, 2, 2, 1]
+A = input().rstrip()
+B = input().rstrip()
+c = []
+for i in range(len(A)):
+    c.append(al[ord(A[i])-65])
+    c.append(al[ord(B[i])-65])
+while True:
+    d = []
+    if len(c) == 2:
+        break
+    for i in range(len(c)-1):
+        d.append((c[i]+c[i+1])%10)
+    c = [i for i in d]
+print(*c, sep="")
