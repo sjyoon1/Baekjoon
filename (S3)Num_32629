@@ -1,0 +1,10 @@
+import sys, math
+input = sys.stdin.readline
+
+T = int(input())
+for i in range(T):
+    N = int(input())
+    if N > ((math.floor(math.sqrt(N))**2) + math.floor(math.sqrt(N))) or N == (math.floor(math.sqrt(N))**2):
+        print(4*(math.ceil(math.sqrt(N))))
+    else:
+        print(4*(math.ceil(math.sqrt(N)))-2)
