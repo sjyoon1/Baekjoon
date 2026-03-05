@@ -1,0 +1,30 @@
+import sys
+input = sys.stdin.readline
+
+T = int(input())
+for i in range(T):
+    a = input().rstrip()
+    b = [i for i in a]
+    num = 0
+    c = int(a)
+    while True:
+        if c == 6174:
+            print(num)
+            break
+        else:
+            b.sort(reverse=True)
+            d = 0
+            e = 0
+            for i in range(4):
+                d += (int(b[i])*(10**(3-i)))
+                e += (int(b[i])*(10**i))
+            c = d - e
+            if c < 10:
+                b = [0, 0, 0, c]
+            elif c < 100:
+                b = [0, 0, c//10, c%10]
+            elif c < 1000:
+                b = [0, c//100, c//10, c%10]
+            else:
+                b = [i for i in str(c)]
+            num += 1
