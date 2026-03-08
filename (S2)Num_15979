@@ -1,0 +1,15 @@
+import sys
+input = sys.stdin.readline
+import math
+
+N, M = map(int, input().split())
+num = 1
+while True:
+    a = math.gcd(N, M)
+    if a == 1:
+        print(num)
+        break
+    else:
+        N //= a
+        M //= a
+        num += 1
