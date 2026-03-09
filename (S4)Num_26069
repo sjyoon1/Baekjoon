@@ -1,0 +1,13 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+a = ["ChongChong"]
+for i in range(N):
+    b, c = map(str, input().split())
+    if b in a:
+        a.append(c)
+    if c in a:
+        a.append(b)
+d = set(a)
+print(len(d))
