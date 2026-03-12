@@ -1,0 +1,13 @@
+try:
+    while True:
+        a = []
+        b = input()
+        c = input()
+        for i in b:
+            if i in c:
+                if a.count(i) < b.count(i) and a.count(i)<c.count(i):
+                    a.append(i)
+        a.sort()
+        print(''.join(a))
+except:
+    pass
