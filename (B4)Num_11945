@@ -1,0 +1,9 @@
+import sys
+input = sys.stdin.readline
+
+N, M = map(int, input().split())
+for i in range(N):
+    a = input().rstrip()
+    b = [i for i in a]
+    b.reverse()
+    print(''.join(b))
