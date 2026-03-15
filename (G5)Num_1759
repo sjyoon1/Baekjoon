@@ -1,0 +1,22 @@
+import sys
+input = sys.stdin.readline
+from itertools import combinations
+
+L, C = map(int, input().split())
+a = list(map(str, input().split()))
+a.sort()
+b = list(combinations(a, L))
+d = ["a", "e", "i", "o", "u"]
+e = []
+for i in range(len(b)):
+    n1, n2 = 0, 0
+    for j in range(L):
+        if b[i][j] in d:
+            n1 += 1
+        else:
+            n2 += 1
+    if n1 >= 1 and n2 >= 2:
+        e.append(b[i])
+for i in e:
+    print(''.join(i))
+        
