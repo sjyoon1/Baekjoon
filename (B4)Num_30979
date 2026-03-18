@@ -1,0 +1,10 @@
+import sys
+input = sys.stdin.readline
+
+T = int(input())    
+F = int(input())
+a = list(map(int, input().split()))
+if T <= sum(a):
+    print("Padaeng_i Happy")
+else:
+    print("Padaeng_i Cry")
