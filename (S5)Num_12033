@@ -1,0 +1,13 @@
+import sys
+input = sys.stdin.readline
+
+T = int(input())
+for i in range(T):
+    N = int(input())
+    p = list(map(int, input().split()))
+    a = []
+    for j in range(N):
+        a.append(p[j])
+        p.remove((p[j]//3)*4)
+    print("Case #",i+1 ,":", sep="" ,end=" ")
+    print(*a)
