@@ -1,0 +1,26 @@
+import sys
+input = sys.stdin.readline
+
+N, M, X, Y = map(int, input().split())
+p = []
+h1, h2 = map(int, input().split())
+for i in range(N-1):
+    A, B = map(str, input().split())
+    B = int(B)
+    if A[:4] != "2024":
+        continue
+    else:
+        if (X-B) > Y:
+            p.append(B)
+        else:
+            p.append(Y-(X-B)+B)
+p.sort(reverse=True)
+if len(p) < M:
+    print("YES")
+    print(0)
+else:
+    if p[M-1] > (h2+Y):
+        print("NO")
+    else:
+        print("YES")
+        print(max(0, p[M-1]-h2))
