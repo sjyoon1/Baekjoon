@@ -1,0 +1,64 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+a = 1
+b = []
+c = 0
+
+if N > 0:
+    pass
+elif N == 0:
+    print(0)
+    quit()
+else:
+    N *= (-1)
+    c = 1
+
+while a <= N:
+    a *= 3
+
+if (a//2) >= N:
+    while a != 1:
+        a //= 3
+        if N < 0:
+            if (N*(-1)) <= (a//2):
+                b.append(0)
+                continue
+            else:
+                b.append("T")
+                N += a
+        elif N <= (a//2):
+            b.append(0)
+            continue
+        else:
+            N -= a
+            b.append(1)
+else:
+    b.append(1)
+    N -= a
+    while a != 1:
+        a //= 3
+        if N < 0:
+            if (N*(-1)) <= (a//2):
+                b.append(0)
+                continue
+            else:
+                b.append("T")
+                N += a
+        elif N <= (a//2):
+            b.append(0)
+            continue
+        else:
+            N -= a
+            b.append(1)
+if c == 0:
+    print(*b, sep="")
+else:
+    for i in b:
+        if i == 1:
+            print("T", end="")
+        elif i == "T":
+            print(1, end="")
+        else:
+            print(0, end="")
