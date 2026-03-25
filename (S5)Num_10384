@@ -1,0 +1,21 @@
+import sys
+input = sys.stdin.readline
+
+n = int(input())
+for i in range(n):
+    dic = dict()
+    for j in range(26):
+        dic[chr(97+j)] = 0
+    a = input().rstrip()
+    a = a.lower()
+    for j in a:
+        if j in dic:
+            dic[j] += 1
+    if min(dic.values()) == 0:
+        print("Case ",i+1, ": Not a pangram", sep="")
+    elif min(dic.values()) == 3:
+        print("Case ",i+1, ": Triple pangram!!!", sep="")
+    elif min(dic.values()) == 2:
+        print("Case ",i+1, ": Double pangram!!", sep="")
+    elif min(dic.values()) == 1:
+        print("Case ",i+1, ": Pangram!", sep="")
