@@ -1,0 +1,19 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+a = []
+b = []
+for i in range(N):
+    c = input().rstrip()
+    if c[:7] == "boj.kr/":
+        b.append(int(c[7:]))
+    else:
+        a.append(c)
+a.sort()
+a.sort(key=len)
+b.sort()
+for i in a:
+    print(i)
+for i in b:
+    print("boj.kr/", i, sep="")
