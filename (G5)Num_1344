@@ -1,0 +1,26 @@
+import sys
+input = sys.stdin.readline
+
+A = int(input())
+A /= 100
+B = int(input())
+B /= 100
+s = [1, 4, 6, 8, 9, 10, 12, 14, 15, 16, 18]
+c = []
+d = []
+c.append((1-A)**18)
+d.append((1-B)**18)
+for i in s:
+    start = 1
+    end = 1
+    for j in range(i):
+        start *= (18-j)
+        end *= (1+j)
+    m = (start // end)
+    c.append(m*(A**i)*((1-A)**(18-i)))
+    d.append(m*(B**i)*((1-B)**(18-i)))
+num = 0
+for i in c:
+    for j in d:
+        num += (i*j)
+print(1-num)
