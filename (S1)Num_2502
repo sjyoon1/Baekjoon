@@ -1,0 +1,20 @@
+import sys
+input = sys.stdin.readline
+
+D, K = map(int, input().split())
+a = [0 for i in range(D)]
+a[0], a[1] = 1, 1
+
+while True:
+    for i in range(2, D):
+        a[i] = a[i-1]+a[i-2]
+    
+    if a[D-1] == K:
+        print(a[0])
+        print(a[1])
+        break
+    elif a[D-1] < K:
+        a[1] += 1
+    else:
+        a[0] += 1
+        a[1] = a[0] 
