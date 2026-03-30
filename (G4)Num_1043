@@ -1,0 +1,38 @@
+import sys
+input = sys.stdin.readline
+
+N, M = map(int, input().split())
+A = list(map(int, input().split()))
+A = A[1:]
+
+d = []
+for i in range(M):
+    c = list(map(int, input().split()))
+    d.append(c[1:])
+    for j in c[1:]:
+        if j in A:
+            for k in range(c[0]):
+                if c[k+1] in A:
+                    continue
+                else:
+                    A.append(c[k+1])
+            break
+while True:
+    B = [i for i in A]
+    for i in range(M):
+        for j in d[i]:
+            if j in A:
+                for k in range(len(d[i])):
+                    if d[i][k] in A:
+                        continue
+                    else:
+                        A.append(d[i][k])
+                break
+    if B == A:
+        break
+
+num = 0
+for i in range(M):
+    if d[i][0] not in A:
+        num += 1    
+print(num)
