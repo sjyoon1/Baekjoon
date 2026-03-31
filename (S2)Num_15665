@@ -1,0 +1,12 @@
+import sys
+input = sys.stdin.readline
+from itertools import product
+
+N, M = map(int, input().split())
+A = list(map(int, input().split()))
+A.sort()
+B = set(A)
+C = [i for i in B]
+C.sort()
+for i in product(C, repeat=M):
+    print(*i)
