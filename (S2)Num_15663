@@ -1,0 +1,17 @@
+import sys
+input = sys.stdin.readline
+from itertools import permutations
+
+N, M = map(int, input().split())
+A = list(map(int, input().split()))
+A.sort()
+B = []
+for i in permutations(A, M): 
+    B.append(i)
+C = set(map(tuple, B))
+D = []
+for i in C:
+    D.append(i)
+D.sort()
+for i in D:
+    print(*i)
