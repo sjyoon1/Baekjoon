@@ -1,0 +1,12 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+b = list(map(int, input().split()))
+ma = b
+mi = b
+for i in range(N-1):
+    c = list(map(int, input().split()))
+    ma = [c[0] + max(ma[0], ma[1]), c[1] + max(ma), c[2] + max(ma[1], ma[2])]
+    mi = [c[0] + min(mi[0], mi[1]), c[1] + min(mi), c[2] + min(mi[1], mi[2])]
+print(max(ma), min(mi))
