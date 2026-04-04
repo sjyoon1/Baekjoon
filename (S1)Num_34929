@@ -1,0 +1,16 @@
+import sys
+input = sys.stdin.readline
+from collections import deque
+
+N = int(input())
+a = list(map(int, input().split()))
+a.sort()
+d = deque(a)
+print(d[N-2])
+for i in range((N-1)//2):
+    b = d[1]
+    print(d[0], d[1], d[2])
+    d.popleft()
+    d.popleft()
+    d.popleft()
+    d.appendleft(b)
