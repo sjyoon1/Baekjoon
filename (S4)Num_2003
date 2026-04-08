@@ -1,0 +1,16 @@
+import sys
+input = sys.stdin.readline
+
+N, M = map(int, input().split())
+A = list(map(int, input().split()))
+result = 0
+L, R = 0, 1
+while L <= R and R < N + 1:
+    if sum(A[L:R]) < M:
+        R += 1
+    elif sum(A[L:R]) == M:
+        result += 1
+        R += 1
+    else:
+        L += 1
+    print(L, R)
