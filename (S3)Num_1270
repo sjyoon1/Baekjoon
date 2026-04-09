@@ -1,0 +1,15 @@
+import sys
+input = sys.stdin.readline
+from collections import Counter
+
+n = int(input())
+for _ in range(n):
+    T = list(map(int, input().split()))
+    c = Counter(T[1:])
+    if max(c.values()) >= (T[0]//2)+1:
+        for i in c.keys():
+            if c[i] == max(c.values()):
+                 print(i)
+                 break
+    else:
+        print("SYJKGW")
