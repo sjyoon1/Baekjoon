@@ -1,0 +1,14 @@
+import sys
+input = sys.stdin.readline
+
+xa, ya, xb, yb, xc, yc = map(int, input().split())
+if xb - xa == 0 and  xc - xb == 0:
+    print(-1)
+elif (yb - ya)*(xc - xb) == (yc - yb)*(xb - xa):
+    print(-1)
+else:
+    ab = ((xa -xb)**2 + (ya - yb)**2)**0.5
+    bc = ((xb -xc)**2 + (yb - yc)**2)**0.5
+    ac = ((xa -xc)**2 + (ya - yc)**2)**0.5
+    l = [ab+ac, ab+bc, ac+bc]
+    print(2*(max(l) - min(l)))
