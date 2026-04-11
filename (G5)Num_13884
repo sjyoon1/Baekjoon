@@ -1,0 +1,20 @@
+import sys, math
+input = sys.stdin.readline
+
+P = int(input())
+for i in range(P):
+    K, N = map(int, input().split())
+    a = []
+    for j in range(math.ceil(N/10)):
+        c = list(map(int, input().split()))
+        for k in c:
+            a.append(k)
+    b = [i for i in a]
+    b.sort()
+    for j in range(N):
+        a[j] = b.index(a[j])
+    num = 0
+    for k in range(N):
+        if a[k] <= num:
+            num += 1
+    print(K, N-num)
