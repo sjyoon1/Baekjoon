@@ -1,0 +1,14 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+tri = []
+for i in range(N):
+    a = list(map(int, input().split()))
+    tri.append(a)
+re = []
+for i in range(N-2):
+    for j in range(i+1, N-1):
+        for k in range(j+1, N):
+            re.append(abs((tri[i][0]*tri[j][1]) + (tri[j][0]*tri[k][1]) + (tri[k][0]*tri[i][1]) - (tri[j][0]*tri[i][1]) - (tri[k][0]*tri[j][1]) - (tri[i][0]*tri[k][1]))/2)
+print(max(re))
