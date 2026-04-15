@@ -1,0 +1,7 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+T = list(map(int, input().split()))
+re = sum(T) + ((N-1)*8)
+print(re//24, re%24)
