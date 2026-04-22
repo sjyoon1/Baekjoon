@@ -1,0 +1,13 @@
+import sys
+input = sys.stdin.readline
+
+while True:
+    try:
+        result = 0
+        N, M, B = map(float, input().split())
+        while N < B:
+            N += (N * (M / 100))
+            result += 1
+        print(result)
+    except:
+            break
