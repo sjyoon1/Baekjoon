@@ -1,0 +1,21 @@
+import sys
+input = sys.stdin.readline
+
+N, K = map(int, input().split())
+a = []
+for i in range(N):
+    t = list(map(str, input().split()))
+    a.append(t)
+a.sort(key=lambda x: (-int(x[2]), int(x[3])))
+num = 0
+univ = []
+b = 0
+while num < K:
+    if a[b][0] in univ:
+        b += 1
+        continue
+    else:
+        univ.append(a[b][0])
+        print(a[b][1])
+        num += 1
+        b += 1
