@@ -1,0 +1,14 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+if N < 3:
+    print(N-1)
+else:
+    a = 1
+    for i in range(3, N):
+        if i % 2 == 0:
+            a = (a*2)-1
+        else:
+            a = (a*2)+1
+    print(a)
